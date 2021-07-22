@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Jua', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+li{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+#top_btn{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(45deg, rgb(34, 52, 153),rgb(0, 10, 102));
+    position: fixed;
+    border-radius: 10px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1;
+}
+/* header */
+header{
+    height: 100px;
+    background: white;
+}
+#logo{
+    width: 300px;
+    height: 70px;
+    position: relative;
+    display: block;
+    top: 15px;
+    left: 15px;
+}
+#m_btn{
+    width: 50px;
+    height: 50px;
+    background: navy;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    border-radius: 10px;
+    padding: 6px 0;
+    z-index: 2;
+}
+#m_btn span{
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    transition: 0.3s;
+}
+#m_btn::before, #m_btn::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 5px;
+    background: white;
+}
+#m_btn.on span{
+    opacity: 0;
+}
+#m_btn.on::before{
+    transform: rotate(45deg);
+    transform-origin: left;
+    margin-left: 10px;
+    transition: 0.3s;
+    background: white;
+}
+#m_btn.on::after{
+    transform: rotate(-45deg);
+    transform-origin: left;
+    margin-left: 10px;
+    background: white;
+    transition: 0.3s;
+    
+}
+nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #eee;
+    width: 45%;
+    height: 100%;
+    box-shadow: -1px 0 2px ;
+    padding-top: 90px;
+    display: none;
+    z-index: 1;
+}
+nav>li>a{
+    display: block;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: navy;
+}
+nav>li>ul a{
+    display: block;
+    font-size: 0.8em;
+    padding: 10px 15px;
+    color: navy;
+}
+nav>li>ul{
+    display: none;
+}
+
+
+/*********************컨텐츠*********************/
+
+section{
+    padding: 10px;
+    background-color: white;
+}
+
+#content1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#content1 div{
+    background-color: white;
+    width: 356.22px;
+    height: 356.22px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+   
+}
+#content1 div:nth-child(1){
+    background: url(/전공캠프/이미지/210104_생크림단팥빵_단면-1280x1280.jpg) no-repeat;
+    background-position: center ;
+    background-size: cover;
+    
+}
+#content1 div:nth-child(2){
+    background: url(/전공캠프/이미지/치케.png) no-repeat;
+    background-position: center ;
+    background-size: cover;
+}
+#content1 div:nth-child(3){
+    background: url(/전공캠프/이미지/사르르레어치즈타르트-1280x1280.jpg) no-repeat;
+    background-position: center ;
+    background-size: cover;
+}
+#content1 div:nth-child(4){
+    background: url(/전공캠프/이미지/210205_딸기마카롱-1-1280x1280.jpg) no-repeat;
+    background-position: center ;
+    background-size: cover;
+}
+#content2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#content2 div{
+    background-color: mediumaquamarine;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#content2 div:nth-child(1){
+    width: 100%;
+}
+#content2 div:nth-child(2), #content2 div:nth-child(3){
+    width: 49%;
+}
+#content2 div:nth-child(1){
+    background: url(/전공캠프/이미지/210210_PB쿠키앤크림케이크-홀-1-1280x1280.jpg) no-repeat;
+    background-position: center ;
+    background-size: cover;
+    color:#333;
+}
+#content2 div:nth-child(2){
+    background: url(/전공캠프/이미지/소보루빵.png) no-repeat;
+    background-position: center ;
+    background-size: cover;
+    color: #eee;
+}
+#content2 div:nth-child(3){
+    background: url(/전공캠프/이미지/200714_실키롤기네스-1280x1280.jpg) no-repeat;
+    background-position: center ;
+    background-size: cover;
+}
+#content3 {
+    height: 200px;
+    background: url(/전공캠프/이미지/200602_클라우드9-1280x1280.jpg);
+    background-position: center ;
+    background-size: cover;
+    border-radius: 5px;
+    
+}
+
+
+/**********************footer**********************/
+
+footer{
+    height: 100px;
+    background-color: navy;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/********************PC버전***********************/
+
+@media all and (min-width: 1024px){
+    #m_btn{
+        display: none;
+        background: none;
+    }
+    nav{
+        display: flex;
+        box-shadow: none;
+        background: none;
+        position: absolute;
+        padding-top: 0;
+        right: 30px;
+        background: white;
+        height: auto;
+        top: 30px;
+        width: 400px;
+    }
+    nav>ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav>li>a{
+        background-image: linear-gradient(rgba(0,0,0,0) 90%, navy 10%);
+        background-repeat: no-repeat;
+        background-size: 0 100%;
+        transition: 0.3s;
+    }
+    nav>li>a:hover{
+        background-size: 100% 100%;
+    }
+    #content1 div{
+        width: 24%;
+    }
+    #content2 div:nth-child(1) {
+        width: 49%;
+    }
+    #content2 div:nth-child(2),
+    #content2 div:nth-child(3){
+        width: 24%;
+    }
+}
+
