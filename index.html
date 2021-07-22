@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>짭네이버</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            width: 100%;
+            height: 150px;
+            position: relative;
+        }
+        nav {
+            border-top: 1px solid #ccc;
+            background-color: white;
+            box-shadow: 0 2px 3px #ccc;
+            /*  그림자 x축 y축 번짐 그림자*/ 
+            padding: 15px 3px 15px 3px;
+            /**/
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+       
+        nav a:hover {
+            color: #04cf5c;
+            transition: 0.5s;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.em;
+            text-align: center;
+            flex: 1;
+            
+        }
+        #로고 {
+            width: 200px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        #search {
+            position: absolute;
+            top: 31px;
+            left: 200px;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li{
+            list-style: none;
+            width: 25%;
+            padding: 10px;
+            border: 1px solid #eee;
+            position: relative;
+        }
+        li a{
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-content: center;
+        }
+        li:hover a{
+            
+            display: flex;
+        }
+        img{
+            width: 100%;
+        }
+        #search input:nth-child(1) {
+            border: 2px solid #04cf5c;
+            width: 400px;
+            height: 30px;
+        }
+        #search input:nth-child(2) {
+            background-color: #04cf5c;
+            border: none;
+            color: white;
+            width: 50px;
+            height: 30px;
+            position: relative;
+            right: 6px;
+            top: 1px;
+        }
+        article {
+            width: 1200px;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+           justify-content: space-between;
+           
+        }
+        section{
+            border: 1px solid #ccc;
+            
+        }
+        section:nth-child(1), section:nth-child(3){
+            width: 69%;
+            margin-top: 6px;
+        }
+        section:nth-child(2), section:nth-child(4){
+            width: 30%;
+            margin-left: 10px;
+        }
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            height: 100%;
+        }
+        .nav_container{
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .contents{
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            padding: 5px;
+        }
+        .con_img{
+            flex: 0.5;
+            height: 150px;
+            overflow: hidden;
+        }
+        .contents img{
+            transition: 0.3s;
+        }
+        .contents:hover .con_img{
+            transform: scale(1.2);
+        }
+        .login{
+            border: 1px solid #04cf5c;
+            padding: 5px;
+            width: 90%;
+        }
+        .con_txt{
+            flex: 1.5;
+            font-size: 0.5cm;
+            padding-left: 10px;
+            margin-bottom: 5px;
+        }
+        section:nth-child(4){
+            overflow: hidden;
+        }
+        .slide{
+            display: flex;
+            position: relative;
+            animation: mov 3s infinite;
+        }
+        @keyframes mov{
+            0%{
+                left: 0%;
+            }
+            35%{
+                left: -100%;
+            }
+            100%{
+                left: -200%;
+            }
+        }
+        footer {
+            background-color: #eee;
+            border-top: 1px solid #fff;
+            margin-top: 10px;
+            width: 100%;
+            height: 100px;
+        }
+        #top_bth {
+                background-color: white;
+                position: fixed;
+                right: 30px;
+                bottom: 30px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #000;
+                box-shadow: 1px 1px 2px grey;
+                z-index: 1;
+            }
+        #top_bth:hover a{
+            background-color: #04cf5c;
+            color: white;
+        }
+        /* div {
+            border: 2px solid green;
+            width: 100px;
+            display: inline-block;
+        }
+        span {
+            inline-size: 2px dotted blue;
+            width: 100px;
+            display: inline-block;
+        } */
+    </style>
+</head>
+<body>
+    <!-- top 버튼 -->
+    
+        <a href="#" id="top_bth">
+            ↑ 
+        </a>
+   
+        <header>
+           
+        
+           <div class="container">
+                <div id="로고">
+                    <a href="index.html">
+                        <img src="/전공캠프/이미지/네이버+로고+by+시멘토/네이버-로고-고화질.png" >
+                    </a> 
+                </div>
+                <div id="search">
+                    <form>
+                        <input type="search">
+                        <input type="submit" value="검색">
+                    </form>
+                </div>
+            </div>
+                <nav>
+                    <div class="nav_container">
+                        <a href="#">메일</a>
+                        <a href="#">카페</a>
+                        <a href="#">블로그</a>
+                        <a href="#">지식iN</a>
+                        <a href="#">쇼핑</a>
+                        <a href="#">뉴스</a>
+                        <a href="#">증권</a>
+                        <a href="#">부동산</a>
+                        <a href="#">지도</a>
+                        <a href="#">VIBE</a>
+                    </div>
+                </nav>
+            
+        </header>
+        <div class="container">
+            
+        <article>
+            <section>
+                <ul>
+                    <li><img src="/전공캠프/이미지/jtbc.jpg"><a href="3">내용 보기</a></li>
+                    <li><img src="/전공캠프/이미지/jtbc.jpg"><a href="3">내용 보기</a></li>
+                    <li><img src="/전공캠프/이미지/jtbc.jpg"><a href="3">내용 보기</a></li>
+                    <li><img src="/전공캠프/이미지/jtbc.jpg"><a href="3">내용 보기</a></li>
+                    <li><img src="/전공캠프/이미지/jtbc.jpg"><a href="3">내용 보기</a></li>
+                    <li><img src="/전공캠프/이미지/jtbc.jpg"><a href="3">내용 보기</a></li>
+                    <li><img src="/전공캠프/이미지/jtbc.jpg"><a href="3">내용 보기</a></li>
+                    <li><img src="/전공캠프/이미지/jtbc.jpg"><a href="3">내용 보기</a></li>
+                    <li><img src="/전공캠프/이미지/jtbc.jpg"><a href="3">내용 보기</a></li>
+                    <li><img src="/전공캠프/이미지/jtbc.jpg"><a href="3">내용 보기</a></li>
+                    <li><img src="/전공캠프/이미지/jtbc.jpg"><a href="3">내용 보기</a></li>
+                    <li><img src="/전공캠프/이미지/jtbc.jpg"><a href="3">내용 보기</a></li>
+                   
+                    
+                </ul>
+            </section>
+            <section>
+                <form>
+                    <input type="text" placeholder="아이디" class="login">
+                    <input type="password" placeholder="비밀번호" class="password">
+                    <input type="submit" value="로그인">
+                </form>
+            </section>
+            <section>
+                   
+                    <a href="#" class="contents">
+                        <div class="con_img">
+                        <img src="/전공캠프/이미지/images.png">
+                        </div>
+                        <div class="con_txt">
+                        <p>
+                            둘째 출산을 하고 산후조리를 해야하는 올 해 여름 
+                            코로나도 여전히 심각한 듯 하여
+                            올 해 여름은 꼼짝없이 집콕이다. 
+                       
+                        </p>
+                        </div>
+                    </a>
+                    <a href="#" class="contents">
+                        <div class="con_img">
+                        <img src="/전공캠프/이미지/images.png">
+                        </div>
+                        <div class="con_txt">
+                        <p>
+                            둘째 출산을 하고 산후조리를 해야하는 올 해 여름 
+                            코로나도 여전히 심각한 듯 하여
+                            올 해 여름은 꼼짝없이 집콕이다. 
+                       
+                        </p>
+                        </div>
+                    </a>
+                
+          
+        </section>
+            <section><div class="slide">
+                <img src="/전공캠프/이미지/aespa.jpeg" >
+                <img src="/전공캠프/이미지/aespa.jpeg">
+                <img src="/전공캠프/이미지/aespa.jpeg">
+            </div></section>
+        </article>
+    </div>
+        <div class="container">
+        <footer>
+            카피라이트
+        </footer>
+        </div>
+</div>
+</body>
+</html>
